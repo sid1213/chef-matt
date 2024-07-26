@@ -1,0 +1,21 @@
+.banner {
+  @apply w-full  h-screen bg-hero bg-no-repeat	bg-cover relative z-40;
+  .carouselBox {
+    @apply h-[calc(100vh-50px)] relative flex justify-center;
+
+    .button {
+      @apply absolute bottom-40 left-1/2 -translate-x-1/2;
+    }
+  }
+
+  :global(.slick-dots li) {
+    @apply m-0;
+  }
+  :global(.slick-dots li.slick-active button:before) {
+    @apply text-transparent text-[12px] border w-[12px] h-[12px] rounded-full mt-[2.1px] ml-[3px];
+  }
+
+  :global(.slick-dots li button:before) {
+    @apply text-white text-[13px] opacity-100;
+  }
+}

@@ -1,0 +1,13 @@
+.container {
+  @apply flex flex-col items-center w-fit mx-auto;
+
+  .img {
+    @apply rounded-full border-2 border-primary max-w-64;
+  }
+  .title {
+    @apply text-primary my-2 text-lg;
+  }
+  p {
+    @apply text-sm;
+  }
+}

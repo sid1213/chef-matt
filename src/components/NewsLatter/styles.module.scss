@@ -1,0 +1,19 @@
+.container {
+  @apply bg-newletter bg-no-repeat bg-cover p-10 bg-blend-darken;
+  .subContainer {
+    @apply pt-24;
+  }
+  h4 {
+    @apply text-4xl border-b-4 w-fit;
+  }
+  p {
+    @apply my-5;
+  }
+  input {
+    @apply border placeholder:text-white p-2 min-w-[50%] mr-9;
+    background: #ffffff4f;
+  }
+  button {
+    @apply bg-primary p-3 h-full px-9 text-sm;
+  }
+}

@@ -1,0 +1,18 @@
+.about {
+  @apply py-16 pt-36 relative z-10 px-14;
+  .leaf {
+    @apply absolute w-[320px] object-contain -top-24 left-0 -z-[1] mb-7;
+  }
+  .heading {
+    @apply text-4xl text-primary border-b-2 border-primary pr-9 w-fit leading-10  font-normal;
+  }
+  .para {
+    @apply text-lg leading-7  font-normal my-6;
+  }
+  .arrowsPrev {
+    @apply absolute left-0 top-[50%] translate-y-[-100%] -translate-x-16 cursor-pointer;
+  }
+  .arrowNext {
+    @apply absolute right-[0] top-[50%] translate-y-[-100%] translate-x-16 cursor-pointer;
+  }
+}

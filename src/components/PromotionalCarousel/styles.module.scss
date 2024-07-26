@@ -1,0 +1,13 @@
+.container {
+  @apply my-20;
+  :global(.slick-dots) {
+    @apply bottom-2;
+  }
+  :global(.slick-dots li.slick-active button:before) {
+    @apply text-transparent text-[12px] border w-[12px] h-[12px] rounded-full mt-[2.1px] ml-[3px];
+  }
+
+  :global(.slick-dots li button:before) {
+    @apply text-[#A7A7A7] text-[13px] opacity-100;
+  }
+}
