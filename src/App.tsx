@@ -50,7 +50,7 @@ function App() {
                   <MenuItem> PRODUCTS </MenuItem>
                   <MenuItem> MEET CHEF MATT </MenuItem>
                   <MenuItem> FAQ </MenuItem>
-                  <MenuItem> CONNECT WITH US </MenuItem>
+                  <MenuItem> CONNECT WITH US</MenuItem>
                 </Menu>
               </div>
 
