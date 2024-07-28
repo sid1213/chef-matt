@@ -1,7 +1,7 @@
 .container {
   @apply bg-no-repeat bg-cover p-10 bg-blend-darken md:w-[calc(100%-130px)] w-[calc(100%-70px)] ml-auto my-20;
   background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
-    url("src/assets/bg-2.jpeg");
+    url("../../assets/bg-2.jpeg");
   .subContainer {
     @apply pt-24;
   }

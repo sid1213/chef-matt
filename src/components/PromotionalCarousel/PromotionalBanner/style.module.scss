@@ -1,6 +1,6 @@
 .card {
   @apply bg-white  text-black bg-no-repeat text-center bg-cover md:p-12 lg:p-16 xl:p-20 sm:p-10 p-10 md:!pb-44;
-  background-image: url("src/assets/bg-1.png");
+  background-image: url("../../../assets/bg-1.png");
   h3 {
     @apply text-2xl sm:text-4xl md:text-6xl md:mb-8;
   }
