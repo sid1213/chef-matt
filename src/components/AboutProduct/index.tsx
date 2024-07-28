@@ -1,10 +1,10 @@
 import Card from "../Common/Card";
-import img from "../../assets/product.jpeg";
 import leaf from "../../assets/leaf.png";
 import leftArrow from "../../assets/Expand_left_double_light.svg";
 import rightArrow from "../../assets/Expand_right_double_light.svg";
 import styles from "./styles.module.scss";
 import Slider from "react-slick";
+import { AboutData } from "../../data/AboutData";
 
 function SampleNextArrow(props: {
   className?: string;
@@ -37,6 +37,33 @@ const AboutProduct = () => {
     arrows: true,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          initialSlide: 3,
+        },
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 500,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
+        },
+      },
+    ],
   };
   return (
     <div className={styles.about}>
@@ -49,16 +76,15 @@ const AboutProduct = () => {
       <br />
       <br />
       <Slider {...settings}>
-        {Array(8)
-          .fill(null)
-          .map(() => (
-            <Card
-              actualRate={12.0}
-              discountedRate={9}
-              title="Coconut Oil"
-              img={img}
-            />
-          ))}
+        {AboutData.map((d, index) => (
+          <Card
+            key={index}
+            actualRate={d?.oldPrice}
+            discountedRate={d?.newPrice}
+            title={d.name}
+            img={d.image}
+          />
+        ))}
       </Slider>
     </div>
   );

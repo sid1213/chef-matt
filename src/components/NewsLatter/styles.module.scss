@@ -1,16 +1,16 @@
 .container {
-  @apply bg-newletter bg-no-repeat bg-cover p-10 bg-blend-darken;
+  @apply bg-newletter bg-no-repeat bg-cover p-10 bg-blend-darken w-11/12 ml-auto;
   .subContainer {
     @apply pt-24;
   }
   h4 {
-    @apply text-4xl border-b-4 w-fit;
+    @apply text-2xl lg:text-4xl border-b-4 w-fit;
   }
   p {
     @apply my-5;
   }
   input {
-    @apply border placeholder:text-white p-2 min-w-[50%] mr-9;
+    @apply border placeholder:text-white p-2 min-w-[50%];
     background: #ffffff4f;
   }
   button {

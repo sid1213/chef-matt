@@ -1,18 +1,19 @@
 .about {
-  @apply py-16 pt-36 relative z-10 px-14;
+  @apply py-16 pt-36 relative z-10 px-10 lg:px-14 w-11/12 ml-auto;
+
   .leaf {
-    @apply absolute w-[320px] object-contain -top-24 left-0 -z-[1] mb-7;
+    @apply absolute w-[250px] lg:w-[320px] object-contain -top-16 lg:-top-24 left-0 -z-[1] mb-7;
   }
   .heading {
-    @apply text-4xl text-primary border-b-2 border-primary pr-9 w-fit leading-10  font-normal;
+    @apply text-2xl md:text-3xl lg:text-4xl text-primary border-b-2 border-primary pr-9 w-fit leading-10  font-normal;
   }
   .para {
-    @apply text-lg leading-7  font-normal my-6;
+    @apply text-sm lg:text-lg leading-7  font-normal my-6;
   }
   .arrowsPrev {
-    @apply absolute left-0 top-[50%] translate-y-[-100%] -translate-x-16 cursor-pointer;
+    @apply absolute left-6 lg:left-0 top-[50%] translate-y-[-100%] -translate-x-16 cursor-pointer w-[50px] md:w-auto;
   }
   .arrowNext {
-    @apply absolute right-[0] top-[50%] translate-y-[-100%] translate-x-16 cursor-pointer;
+    @apply absolute right-6 lg:right-0 top-[50%] translate-y-[-100%] translate-x-16 cursor-pointer w-[50px] md:w-auto;
   }
 }
