@@ -1,14 +1,14 @@
 .card {
-  @apply bg-promotion text-black bg-no-repeat text-center bg-cover p-20;
+  @apply bg-white md:bg-promotion text-black bg-no-repeat text-center bg-cover md:p-12 lg:p-16 xl:p-20 sm:p-10 p-10 md:!pb-44;
   h3 {
-    @apply text-6xl pb-6;
+    @apply text-2xl sm:text-4xl md:text-6xl md:mb-8;
   }
   hr {
-    @apply w-20 bg-black mx-auto h-2 mb-4;
+    @apply w-20 bg-black mx-auto h-1 md:h-2  mb-4;
   }
 
   p {
-    @apply text-2xl mb-8;
+    @apply text-lg sm:text-xl md:text-2xl  mb-8;
   }
   strong {
     @apply font-bold font-[system-ui];

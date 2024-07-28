@@ -5,7 +5,7 @@ import meet from "../../assets/meet.png";
 
 export const Info = () => {
   return (
-    <div className="flex flex-wrap flex-row w-11/12 ml-auto">
+    <div className="flex flex-wrap flex-row md:w-[calc(100%-130px)] w-[calc(100%-70px)] ml-auto my-20">
       <div className="flex gap-5 w-full lg:w-3/6 bg-white text-black justify-center items-center px-5">
         <div className="flex flex-col gap-4">
           <h2 className="text-2xl md:text-4xl font-semibold">

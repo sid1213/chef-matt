@@ -1,5 +1,5 @@
 .container {
-  @apply mt-2  border-t-4 border-primary w-11/12 ml-auto overflow-x-hidden;
+  @apply mt-2  border-t-4 border-primary md:w-[calc(100%-130px)] w-[calc(100%-70px)] ml-auto overflow-x-hidden;
   img {
     @apply max-w-[250px] lg:max-w-[450px] mx-auto;
   }

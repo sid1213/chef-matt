@@ -1,5 +1,5 @@
 .container {
-  @apply my-20 w-11/12 ml-auto;
+  @apply my-16 md:w-[calc(100%-130px)] w-[calc(100%-70px)] ml-auto;
   :global(.slick-dots) {
     @apply bottom-1;
   }

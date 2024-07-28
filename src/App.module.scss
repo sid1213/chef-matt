@@ -1,27 +1,55 @@
-.header {
-  @apply bg-purple-500;
-}
 .sideBar {
-  position: fixed !important;
-  border-color: #d29a5a !important;
-  border-right-width: 4px !important;
-  @apply h-screen top-0 z-[1111]
-    bg-transparent;
+  @apply h-screen top-0 z-[1111] bg-transparent w-[130px] !border-r-4 md:!border-r-8   !border-primary !fixed;
 
   .menuContainer {
     @apply p-5 h-full;
     .logoContainer {
-      @apply w-full h-[calc(100%-40px)]  flex items-center justify-start;
+      @apply absolute top-1/2 -rotate-90 -translate-x-1/2 -translate-y-1/2 left-1/2 md:w-[300px] w-[150px];
       .logo {
-        @apply -rotate-90 -translate-x-1/3 w-[300px] max-w-[unset];
+        @apply w-[300px];
       }
     }
-
     .bars {
       @apply w-full;
       svg {
         @apply mx-auto;
       }
     }
+    .collapsed {
+      @apply flex justify-center w-full;
+    }
   }
+  .menu {
+    nav {
+      ul {
+        li {
+          a {
+            @apply hover:text-primary hover:bg-transparent;
+          }
+        }
+      }
+    }
+    @apply flex flex-col h-[90%] justify-between;
+    .menuListBox {
+      @apply bg-emerald-300;
+    }
+  }
+  .menuFooter {
+    @apply flex flex-wrap absolute w-full left-0 bottom-6;
+    p {
+      @apply text-xs ml-0 text-center w-full;
+      span {
+        @apply text-primary my-2 underline;
+      }
+    }
+    .buttons {
+      @apply border-t-2 w-full mt-4 flex justify-between pt-5 px-5;
+      button {
+        @apply flex gap-2;
+      }
+    }
+  }
+}
+.main {
+  @apply w-full overflow-x-hidden;
 }

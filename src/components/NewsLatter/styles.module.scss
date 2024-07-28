@@ -1,5 +1,5 @@
 .container {
-  @apply bg-newletter bg-no-repeat bg-cover p-10 bg-blend-darken w-11/12 ml-auto;
+  @apply bg-newletter bg-no-repeat bg-cover p-10 bg-blend-darken md:w-[calc(100%-130px)] w-[calc(100%-70px)] ml-auto my-20;
   .subContainer {
     @apply pt-24;
   }

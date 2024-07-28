@@ -12,12 +12,14 @@ import { Menu, MenuItem, Sidebar } from "react-pro-sidebar";
 import logo from "../src/assets/logo.png";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import styles from "./App.module.scss";
 import { Delivery } from "./components/Delivery";
 import { Info } from "./components/Info";
+import useWindowDimensions from "./hooks/useWindowDimensions";
+import styles from "./App.module.scss";
 
 function App() {
   const [collapsed, setCollapsed] = useState(true);
+  const { width } = useWindowDimensions();
 
   return (
     <Container>
@@ -25,12 +27,12 @@ function App() {
         collapsed={collapsed}
         className={styles.sideBar}
         backgroundColor="#130F0CCC"
-        collapsedWidth="130px"
+        collapsedWidth={width >= 768 ? "130px" : "70px"}
       >
         <div className={styles.menuContainer}>
           <button
             onClick={() => setCollapsed((prev) => !prev)}
-            className={collapsed ? styles.bars : "flex justify-center w-full"}
+            className={collapsed ? styles.bars : styles.collapsed}
           >
             {!collapsed ? <RxCross1 size={24} /> : <FaBars size={24} />}
           </button>
@@ -40,10 +42,10 @@ function App() {
               <img src={logo} alt="logo" className={styles.logo} />
             </div>
           ) : (
-            <div className="flex flex-col h-[90%] justify-between">
+            <div className={styles.menu}>
               <div>
                 <img src={logo} alt="logo" className={styles.logo} />
-                <Menu>
+                <Menu className={styles.menuListBox}>
                   <MenuItem> HOME </MenuItem>
                   <MenuItem> PRODUCTS </MenuItem>
                   <MenuItem> MEET CHEF MATT </MenuItem>
@@ -52,16 +54,15 @@ function App() {
                 </Menu>
               </div>
 
-              <div className="flex flex-wrap">
-                <p className="text-xs ml-0">
-                  TEXT SUPPORT 24/7{" "}
-                  <span className="text-primary my-2"> 070-7782-9137</span>
+              <div className={styles.menuFooter}>
+                <p>
+                  TEXT SUPPORT 24/7 <span> 070-7782-9137</span>
                 </p>
-                <div className=" border-t-2 w-full mt-4 flex justify-between pt-5">
-                  <button className="flex gap-2">
+                <div className={styles.buttons}>
+                  <button>
                     <BsHandbag size={"20"} /> CART
                   </button>
-                  <button className="flex gap-2">
+                  <button>
                     <FaRegHeart size={"20"} /> WISHLIST
                   </button>
                 </div>
@@ -70,11 +71,11 @@ function App() {
           )}
         </div>
       </Sidebar>
-      <div className="w-full overflow-x-hidden">
+      <div className={styles.main}>
         <HeroBanner />
         <AboutProduct />
         <PromotionalCarousel />
-        {!collapsed && <Info />}
+        <Info />
         <NewsLatter />
         <Delivery />
         <Footer />
