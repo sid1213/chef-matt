@@ -30,9 +30,6 @@
       }
     }
     @apply flex flex-col h-[90%] justify-between;
-    .menuListBox {
-      @apply bg-emerald-300;
-    }
   }
   .menuFooter {
     @apply flex flex-wrap absolute w-full left-0 bottom-6;
